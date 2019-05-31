@@ -1,0 +1,34 @@
+##  This project is created for learning basics of Spring Boot and its configurations.
+/**
+    In this repository:
+
+        You will find some beneficial info to help beginner level developer.
+        In this repo, we will use Spring Boot, MySQL, Jenkins, Docker. Also we will need
+        Command Line and Java. Java and MySQL should be installed in your computer.
+
+    Planned steps of developing this repository are like above:
+
+        - Show software development steps
+        - Plan a new app and prepare document for its development time
+        - Check for security problems
+        - Developing app
+        - Testing unit by unit
+        - Merge it to master
+        *** Master will be production level
+        - Configure Docker in remote server
+        - Configure jenkins
+        - Configure the jenkins pipeline to deploy app by pushing a comment
+
+    While this repo is being developed:
+
+        - Directions and documents for this repo are in readmeFiles
+        - HTML files are in srv/main/resources/templates
+        - The codes are in src/main/java/com.eminesezer.surveyapp
+        - Test files are in src/test
+
+*/
+
+!!!  If you need more help or any question, you can connect me by my web page.
+                               www.eminesezer.com.tr
+
+Enjoy your time !!!

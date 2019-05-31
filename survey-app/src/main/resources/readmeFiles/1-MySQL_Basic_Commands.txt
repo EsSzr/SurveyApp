@@ -1,0 +1,46 @@
+# There are some simple commands in mysql we should know them :
+
+-	SHOW DATABASES;
+    // Shows the list of databases
+
+-	SHOW VARIABLES WHERE Variable_Name LIKE "%dir";
+    // Shows the paths of directories
+
+-	CREATE DATABSE 'database_name';
+    // Creates a new database
+
+-	DROP DATABASE 'database_name';
+    // Deletes the database
+
+-	CREATE USER 'user_name'@'host_name / host_address' IDENTIFIED BY 'password';
+    // Creates a new user to use mysql from outside
+
+-	DROP USER 'user_name';
+    // Deletes a user
+
+-	FLUSH PRIVILEGES;
+    // Reload (activate / deactivate) privileges
+
+-	GRANT type_of_permission ON database_name.table_name TO 'user_name'@'host_name / host_address';
+    // gives permission to user on a database or on a database's table as defined
+
+-	GRANT CREATE ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT UPDATE ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT SELECT ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT DELETE ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT DROP ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT INSERT ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT ALL PRIVILEGES ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+-	GRANT GRANT OPTION ON 'database_name'.'table_name' to 'user_name'@'host_name / host_address';
+
+-	REVOKE type_of_permission ON database_name.table_name FROM 'user_name'@'host_name / host_address';
+    // delete configured privileges
+
+-	SHOW GRANTS FOR 'username';
+    // shows the privileges which defined user can control or use
+
+-	QUIT
+    // Ends MySQL command line section.
+
+-	MYSQL -u 'user_name' -p 'database_name' (asks password for here 'password')
+    // The line to be login

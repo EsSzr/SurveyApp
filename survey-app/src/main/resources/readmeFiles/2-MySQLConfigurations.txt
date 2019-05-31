@@ -1,0 +1,109 @@
+## This file gives you the commands to run in mysql command line.
+## If you can use mysql command, also you can connect to mysql server by command line.
+
+/*
+    Keywords will be used in commands are:
+    'username' : username of your mysql (I will use root as default)
+    'password' : password you will use
+    'database_name' : the name for our database
+    'user_name' : the name of user will be used from everywhere
+    'host_name' : host_name or host_address to use which we will use
+    'type_of_permission' : the type of MySQL permissions
+                            CREATE, SELECT, UPDATE, DELETE, DROP, INSERT, ALL PRIVILEGES, GRANT OPTION
+    'table_name' : the name of tables to give this permission
+                            (For all of tables use '*' like 'database_name'.*)
+
+    ** First we have to connect our database:
+
+        mysql -u 'username' -p
+        'password'
+
+    ** Then we have to create database:
+
+        create database 'database_name';
+
+    ** Create user:
+
+        create user 'user_name'@'host_name' identified by 'password';
+
+    ** Grant user permissions:
+
+        grant 'type_of_permission' ON 'database_name'.'table_name' TO 'user_name'@'host_name';
+
+*/
+
+## Commands used for this repo
+
+mysql> SHOW VARIABLES WHERE Variable_Name LIKE "%dir";
+
+mysql> SHOW DATABASES;
+
+mysql> CREATE DATABASE survey_app_test;
+
+mysql> CREATE DATABASE survey_app_prod;
+
+mysql> CREATE DATABASE survey_app_dev;,
+
+mysql> CREATE USER 'survey_prod'@localhost IDENTIFIED BY 'G$U-xEs27cQWB=Ha';
+
+mysql> CREATE USER 'survey_test'@localhost IDENTIFIED BY 'TU*rkg9&aaNJW+d$';
+
+mysql> CREATE USER 'survey_dev'@localhost IDENTIFIED BY 'Cy^6Ctx#gWW*%M9w';
+
+mysql>  FLUSH PRIVILEGES;
+
+mysql> GRANT CREATE ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> GRANT UPDATE ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> GRANT DELETE ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> GRANT SELECT ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> GRANT CREATE ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> GRANT DROP  ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> GRANT INSERT ON survey_app_prod.* to 'survey_prod'@localhost;
+
+mysql> SHOW GRANTS FOR 'survey_prod'@localhost;
+
+mysql> FLUSH PRIVILEGES;
+
+mysql> GRANT INSERT ON survey_app_dev.* to 'survey_dev'@localhost;
+
+mysql> GRANT DELETE ON survey_app_dev.* to 'survey_dev'@localhost;
+
+mysql> GRANT UPDATE ON survey_app_dev.* to 'survey_dev'@localhost;
+
+mysql> GRANT SELECT ON survey_app_dev.* to 'survey_dev'@localhost;
+
+mysql> GRANT CREATE ON survey_app_dev.* to 'survey_dev'@localhost;
+
+mysql> GRANT DROP ON survey_app_dev.* to 'survey_dev'@localhost;
+
+mysql> FLUSH PRIVILEGES;
+
+mysql> GRANT CREATE ON survey_app_test.* to 'survey_test'@localhost;
+
+mysql> GRANT SELECT ON survey_app_test.* to 'survey_test'@localhost;
+
+mysql> GRANT INSERT ON survey_app_test.* to 'survey_test'@localhost;
+
+mysql> GRANT UPDATE ON survey_app_test.* to 'survey_test'@localhost;
+
+mysql> GRANT DELETE ON survey_app_test.* to 'survey_test'@localhost;
+
+mysql> GRANT DROP ON survey_app_test.* to 'survey_test'@localhost;
+
+mysql> FLUSH PRIVILEGES;
+
+mysql> SHOW DATABASES;
+
+mysql> SHOW GRANTS  for 'survey_test'@localhost;
+
+mysql> SHOW GRANTS  for 'survey_dev'@localhost;
+
+mysql> SHOW GRANTS  for 'survey_prod'@localhost;
+
+mysql> QUIT
